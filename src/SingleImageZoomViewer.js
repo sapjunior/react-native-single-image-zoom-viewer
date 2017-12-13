@@ -62,7 +62,7 @@ class SingleImageZoomViewer extends React.Component{
 		if (this.props.source.uri === undefined) {
 			this.center(this.props.width || 200, this.props.height || 200)
 		} else {
-			Image.getSize(this.props.source, (width, height)=>{
+			Image.getSize(this.props.source.uri, (width, height)=>{
 				this.center(width,height)
 			}, (error) => {
 				console.error(error)
